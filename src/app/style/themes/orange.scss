@@ -1,0 +1,27 @@
+.app {
+  &.green {
+    --bg-color: #37a34b;
+    --inverted-bg-color: #F4FBF5;
+
+    --primary-color: #37a34b;
+    --secondary-color: #F4FBF5;
+
+    --inverted-primary-color: #b0c3ff;
+    --inverted-secondary-color: #7c0b0b;
+
+
+    .page-container {
+      color: var(--secondary-color);
+
+      ._title_bdl0z_1{
+        color: var(--secondary-color);
+      }
+
+      ._outline_1enwp_10 {
+        color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+      }
+    }
+  }
+}
+

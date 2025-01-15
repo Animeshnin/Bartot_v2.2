@@ -1,0 +1,47 @@
+:root {
+  --font-famyly-primary: Consolas, "Times New Roman", sans-serif;
+
+  --font-size-base: 16px;
+  --font-line-base: 24px;
+
+  --font-base: var(--font-size-base) / var(--font-line-base) var(--font-famyly-primary);
+
+  --font-size-large: 24px;
+  --font-line-large: 32px;
+
+  --font-large: var(--font-size-large) / var(--font-line-large) var(--font-famyly-primary);
+
+
+  --font-size-x-large: 32px;
+  --font-line-x-large: 40px;
+
+  --font-x-large: var(--font-size-x-large) / var(--font-line-x-large) var(--font-famyly-primary);
+
+
+  //  Размер
+  --navbar-height: 50px;
+
+  // z-index
+
+  --modal-z-index: 10;
+
+
+  --bg-color: #ffffff;
+  --inverted-bg-color: #0b0b5a;
+
+
+  --primary-color: #002bff;
+  --secondary-color: #0449e0;
+
+
+  --inverted-primary-color: #049604;
+  --inverted-secondary-color: #04ff04;
+
+  // Цвета
+  --red-light: #ff0000;
+  --red-dark: #ce0505;
+
+
+}
+
+

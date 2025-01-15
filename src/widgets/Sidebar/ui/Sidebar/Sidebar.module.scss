@@ -1,0 +1,40 @@
+aside{
+  width: 300px;
+  height: calc(100vh - var(--navbar-height));
+  transition: 0.2s;
+  background-color: var(--inverted-bg-color);
+  position: relative;
+}
+
+.switcher{
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.collapsed{
+  width: 75px;
+
+  .switcher{
+    flex-direction: column;
+  }
+}
+
+
+
+.collapsBtn{
+  position: absolute;
+  right: -32px;
+  font-size: 16px;
+  font-weight: bold;
+  bottom: 40px;
+}
+
+.items{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
