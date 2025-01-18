@@ -3,11 +3,13 @@ import {UserSchema} from "@/entities/User/model/types/user.ts";
 import {ProfileSchema} from "@/entities/Profile";
 import {AxiosInstance} from "axios";
 import {NavigateOptions, To} from "react-router-dom";
+import {ArticleSchema} from "@/entities/Article";
 
 export interface StateSchema {
     user: UserSchema,
     loginForm: LoginShema,
-    profile?: ProfileSchema
+    profile?: ProfileSchema,
+    article: ArticleSchema,
 }
 
 

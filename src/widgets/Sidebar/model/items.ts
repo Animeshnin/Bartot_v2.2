@@ -19,5 +19,11 @@ export const SidebarItemsList:SidebarItemType[] = [
         path: RouterPath.profile,
         text: "Мой профиль",
         authOnly: true,
-    }
+    },
+    {
+        path: RouterPath.articles,
+        text: "Статьи",
+        authOnly: true,
+    },
+
 ]

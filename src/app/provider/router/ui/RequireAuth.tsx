@@ -1,18 +1,19 @@
-import {JSX} from "react";
-import {useSelector} from "react-redux";
-import {getUserAuthData} from "@/entities/User/selectors/getUserAuthData/getUserAuthData.ts";
-import {useLocation} from "react-router-dom";
-import {Navigate} from "react-router-dom";
-import { RouterPath} from "@/shared/config/routeConfig/routeConfig.tsx";
+import { useSelector } from 'react-redux';
+import { Navigate, useLocation } from 'react-router-dom';
+import {getUserAuthData} from "@/entities/User";
+import {RouterPath} from "@/shared/config/routeConfig/routeConfig.tsx";
 
-export function RequireAuth({children}: {children: JSX.Element}) {
-    const authData = useSelector(getUserAuthData)
+export function  RequireAuth ({ children }:  { children: JSX.Element })  {
+    const auth = useSelector(getUserAuthData);
     const location = useLocation();
 
-    if(!authData){
-
-        return <Navigate to={RouterPath.about} state={{from: location}} replace />
+    if (!auth) {
+        // Redirect them to the /login page, but save the current location they were
+        // trying to go to when they were redirected. This allows us to send them
+        // along to that page after they login, which is a nicer user experience
+        // than dropping them off on the home page.
+        return <Navigate to={RouterPath.main} state={{ from: location }} replace />;
     }
 
-    return children
+    return children;
 }

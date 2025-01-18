@@ -6,6 +6,7 @@ import { profileReducer } from "@/entities/Profile/index.ts";
 import { userReducer } from "@/entities/User/model/slice/userSlice.ts";
 import {$api} from "@/shared/api/api.ts";
 import {NavigateOptions, To} from "react-router-dom";
+import { articleReducer } from "@/entities/Article/model/slice/ArticleDetailsSlice.ts";
 
 export function createReduxStore(
     initialState?: StateSchema,
@@ -16,6 +17,7 @@ export function createReduxStore(
         user:   userReducer,
         loginForm: loginReducer,
         profile: profileReducer,
+        article:  articleReducer,
     });
 
 

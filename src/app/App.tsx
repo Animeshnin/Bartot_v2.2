@@ -5,12 +5,14 @@ import {classNames} from "@/shared/lib/classNames/classNames.ts";
 import {Suspense, useEffect} from "react";
 import Navbar from "@/widgets/Navbar/ui/Navbar.tsx";
 import {userActions} from "@/entities/User/model/slice/userSlice.ts";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {getUserInited} from "@/entities/User/selectors/getUserInited/getUserInited.ts";
 
 
 function App(){
     const {theme} = useTheme();
     const dispatch = useDispatch();
+    const inited = useSelector(getUserInited)
 
     useEffect(() => {
         dispatch(userActions.initAuthData())
@@ -21,7 +23,7 @@ function App(){
                 <Navbar/>
                 <div className={'content-path'}>
                     <Sidebar/>
-                    <AppRouter/>
+                    {inited && <AppRouter/>}
                 </div>
             </Suspense>
         </div>

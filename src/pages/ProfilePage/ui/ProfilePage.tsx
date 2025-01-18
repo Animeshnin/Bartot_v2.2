@@ -30,6 +30,8 @@ const  ProfilePage =({className}: ProfilePageProps) => {
     const validateErrors = useSelector(getProfileValidateErrors)
 
 
+
+
     const validateErrorTranslate = {
         [ValidateProfileError.SERVER_ERROR]: "Ошибка сервера",
         [ValidateProfileError.INCORRECT_COUNTY]: "Некорректная страна",
@@ -44,7 +46,7 @@ const  ProfilePage =({className}: ProfilePageProps) => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
         dispatch(fetchProfileData())
-    }, []);
+    }, [dispatch]);
 
     const onChangeFirstName = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ first: value || '' }));

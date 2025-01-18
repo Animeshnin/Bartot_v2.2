@@ -10,8 +10,15 @@
     --inverted-secondary-color: #7c0b0b;
 
 
+    --skeleton-color: #fff;
+    --skeleton-shadow: rgba(0 0 0 / 20%);
+
     .page-container {
       color: var(--secondary-color);
+      overflow-y: auto;
+      flex-grow: 1;
+      padding: 15px;
+      height: calc(100vh - 50px);
 
       ._title_bdl0z_1{
         color: var(--secondary-color);
