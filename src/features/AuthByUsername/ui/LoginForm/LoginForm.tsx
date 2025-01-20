@@ -1,6 +1,6 @@
 import cls from './LoginForm.module.scss'
 import {useTranslation} from "react-i18next";
-import {Text, TextTheme} from "@/shared/ui/Text/Text.tsx";
+import {Text} from "@/shared/ui/Text/Text.tsx";
 import Input from "@/shared/ui/Input/Input.tsx";
 import Button, {ButtonTheme} from "@/shared/ui/Button/Button.tsx";
 import {useDispatch, useSelector} from "react-redux";
@@ -8,6 +8,7 @@ import {getLoginState} from "../../model/selectors/getLoginState/getLoginState.t
 import {useCallback} from "react";
 import {loginActions} from "../../model/slice/LoginSlice.ts";
 import {loginByUsername} from "../../model/services/loginByUsername/loginByUsername.ts";
+import {TextTheme} from "@/shared/ui/Text/TextTypes.ts";
 
 
 export const LoginForm = () => {

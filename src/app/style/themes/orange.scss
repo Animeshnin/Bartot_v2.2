@@ -3,16 +3,20 @@
     --bg-color: #37a34b;
     --inverted-bg-color: #F4FBF5;
 
-    --primary-color: #37a34b;
+    --primary-color: #1c732a;
+
     --secondary-color: #F4FBF5;
 
     --inverted-primary-color: #b0c3ff;
     --inverted-secondary-color: #7c0b0b;
 
-
+    // Skeleton
     --skeleton-color: #fff;
     --skeleton-shadow: rgba(0 0 0 / 20%);
 
+
+    // code
+    --code-bg: #4b9a57;
     .page-container {
       color: var(--secondary-color);
       overflow-y: auto;
@@ -28,6 +32,8 @@
         color: var(--secondary-color);
         border: 1px solid var(--secondary-color);
       }
+
+
     }
   }
 }

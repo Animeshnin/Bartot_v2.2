@@ -2,12 +2,13 @@ import {classNames} from "@/shared/lib/classNames/classNames.ts";
 import cls from './ProfileCard.module.scss'
 import {useTranslation} from "react-i18next";
 
-import {Text, TextTheme} from "@/shared/ui/Text/Text.tsx";
+import {Text} from "@/shared/ui/Text/Text.tsx";
 import Input from "@/shared/ui/Input/Input.tsx";
 import {Profile} from "../../model/types/profile";
 import {PageLoader} from "@/widgets/PageLoader";
 import {Currency, CurrencySelect} from "@/entities/Currency";
 import {Country, CountrySelect} from "@/entities/Country";
+import {TextTheme} from "@/shared/ui/Text/TextTypes.ts";
 
 
 

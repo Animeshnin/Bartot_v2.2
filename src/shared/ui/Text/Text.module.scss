@@ -2,8 +2,8 @@
   color: var(--primary-color);
 }
 
+
 .text {
-  font: var(--font-size-medium);
   color: var(--secondary-color);
 
   &.align-center {
@@ -25,6 +25,28 @@
 
   .text{
     color: var(--red-dark);
+
+  }
+}
+
+.medium{
+  .title{
+    font: var(--font-large);
+  }
+
+  .text{
+    font: var(--font-base);
+
+  }
+}
+
+.large{
+  .title{
+    font: var(--font-x-large);
+  }
+
+  .text{
+    font: var(--font-large);
 
   }
 }

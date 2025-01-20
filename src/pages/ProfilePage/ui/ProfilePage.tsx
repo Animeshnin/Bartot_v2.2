@@ -15,7 +15,8 @@ import {ProfilePageHeader} from "./ProflePageHeader/ProfilePageHeader";
 import {Currency} from "@/entities/Currency";
 
 import {Country} from "@/entities/Country/types/country.ts";
-import {Text, TextTheme} from "@/shared/ui/Text/Text.tsx";
+import {Text} from "@/shared/ui/Text/Text.tsx";
+import {TextTheme} from "@/shared/ui/Text/TextTypes.ts";
 
 interface ProfilePageProps {
     className?: string;
