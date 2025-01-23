@@ -23,6 +23,8 @@ body{
 .page-container{
   flex-grow: 1;
   color: var(--primary-color);
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
   padding: 40px;
   width: 100%;
 }

@@ -18,7 +18,7 @@ createRoot(document.getElementById('root')!).render(
                         <App />
                     </ThemeProvider>
                 </ErrorBoundary>
-        </StrictMode>,
+        </StrictMode>
     </StoreProvider>
     </BrowserRouter>
 

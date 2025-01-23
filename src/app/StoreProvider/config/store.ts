@@ -7,17 +7,19 @@ import { userReducer } from "@/entities/User/model/slice/userSlice.ts";
 import {$api} from "@/shared/api/api.ts";
 import {NavigateOptions, To} from "react-router-dom";
 import { articleReducer } from "@/entities/Article/model/slice/ArticleDetailsSlice.ts";
+import {ArticleDetailsPageSchema} from "@/pages/ArticleDetailsPage";
+import {articleDetailsCommentReducer} from "@/pages/ArticleDetailsPage/model/slice/articleDetailsCommentSlice.ts";
 
 export function createReduxStore(
     initialState?: StateSchema,
     navigate?: (to: To, options?: NavigateOptions) => void )  {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
+
     const rootReducer: ReducersMapObject<StateSchema> = combineReducers({
         user:   userReducer,
         loginForm: loginReducer,
         profile: profileReducer,
         article:  articleReducer,
+        articleComments: articleDetailsCommentReducer
     });
 
 

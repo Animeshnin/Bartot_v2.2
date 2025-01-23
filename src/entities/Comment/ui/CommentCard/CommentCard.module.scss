@@ -1,0 +1,24 @@
+.CommentCard {
+  border: 1px solid var(--primary-color);
+  padding: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+
+}
+
+.headerComment{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.headerCommentText{
+  margin-left: 12px;
+}
+
+.headerCommentSkeleton{
+
+}
