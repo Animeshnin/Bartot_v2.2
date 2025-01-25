@@ -20,6 +20,7 @@ export const fetchCommentsByArticleId = createAsyncThunk<Comment[], string | und
                         _expand: 'user'
                     }
                 })
+
             return response.data;
         }
         catch (e) {

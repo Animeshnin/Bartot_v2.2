@@ -56,9 +56,9 @@ export const { reducer: articleDetailsCommentReducer} = articleDetailsCommentsSl
 
 
 
-// type RootState = ReturnType<typeof store.getState>
+// type RootState = ReturnType<typeof store.TestAsyncThunk>
 //
-// console.log(store.getState().books)
+// console.log(store.TestAsyncThunk().books)
 // // { ids: [], entities: {} }
 //
 // // Can create a set of memoized selectors based on the location of this entity state
@@ -67,4 +67,4 @@ export const { reducer: articleDetailsCommentReducer} = articleDetailsCommentsSl
 // )
 //
 // // And then use the selectors to retrieve values
-// const allBooks = booksSelectors.selectAll(store.getState())
+// const allBooks = booksSelectors.selectAll(store.TestAsyncThunk())

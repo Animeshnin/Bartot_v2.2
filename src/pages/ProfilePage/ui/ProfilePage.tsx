@@ -17,6 +17,7 @@ import {Currency} from "@/entities/Currency";
 import {Country} from "@/entities/Country/types/country.ts";
 import {Text} from "@/shared/ui/Text/Text.tsx";
 import {TextTheme} from "@/shared/ui/Text/TextTypes.ts";
+import {useParams} from "react-router";
 
 interface ProfilePageProps {
     className?: string;
@@ -28,6 +29,7 @@ const  ProfilePage =({className}: ProfilePageProps) => {
     const isLoading = useSelector(getProfileIsLoading)
     const error = useSelector(getProfileError)
     const readonly = useSelector(getProfileReadonly)
+    const {id} = useParams<{id: string}>()
     const validateErrors = useSelector(getProfileValidateErrors)
 
 
@@ -44,9 +46,12 @@ const  ProfilePage =({className}: ProfilePageProps) => {
 
     useEffect(() => {
         
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
-        dispatch(fetchProfileData())
+
+        if (id) {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
+            dispatch(fetchProfileData(id))
+        }
     }, [dispatch]);
 
     const onChangeFirstName = useCallback((value?: string) => {

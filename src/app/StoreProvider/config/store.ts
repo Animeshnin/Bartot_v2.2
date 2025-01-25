@@ -7,8 +7,8 @@ import { userReducer } from "@/entities/User/model/slice/userSlice.ts";
 import {$api} from "@/shared/api/api.ts";
 import {NavigateOptions, To} from "react-router-dom";
 import { articleReducer } from "@/entities/Article/model/slice/ArticleDetailsSlice.ts";
-import {ArticleDetailsPageSchema} from "@/pages/ArticleDetailsPage";
 import {articleDetailsCommentReducer} from "@/pages/ArticleDetailsPage/model/slice/articleDetailsCommentSlice.ts";
+import {addCommentsFormReducer} from "@/features/addCommentForm/model/slices/addCommentsFormSlice.ts";
 
 export function createReduxStore(
     initialState?: StateSchema,
@@ -19,7 +19,8 @@ export function createReduxStore(
         loginForm: loginReducer,
         profile: profileReducer,
         article:  articleReducer,
-        articleComments: articleDetailsCommentReducer
+        articleComments: articleDetailsCommentReducer,
+        addCommentsForm: addCommentsFormReducer
     });
 
 

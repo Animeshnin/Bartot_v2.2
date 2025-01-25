@@ -15,7 +15,6 @@ export enum AppRoutes {
     PROFILE = 'profile',
     ARTICLES = 'articles',
     ARTICLE_DETAILS = 'article_details',
-
     NOTFOUNDPAGE = 'notFound',
 
 
@@ -35,7 +34,7 @@ export const RouterPath: Record<AppRoutes, string> = {
     [AppRoutes.ARTICLES]: '/articles',
     [AppRoutes.ARTICLE_DETAILS]: '/articles/', // + :id
     [AppRoutes.NOTFOUNDPAGE]: '*',
-    [AppRoutes.PROFILE]: '/profile',
+    [AppRoutes.PROFILE]: '/profile/',
 }
 
 export const routerConfig: Record<AppRoutes, AppRoutesProps> = {
@@ -62,7 +61,7 @@ export const routerConfig: Record<AppRoutes, AppRoutesProps> = {
         authOnly: true
     },
     [AppRoutes.PROFILE] : {
-        path: RouterPath.profile,
+        path: `${RouterPath.profile}:id`,
         element: <ProfilePage/>,
         authOnly: true
     }

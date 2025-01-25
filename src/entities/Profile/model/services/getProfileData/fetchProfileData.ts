@@ -5,11 +5,11 @@ import {Profile} from "../../types/profile.ts";
 
 
 
-export const fetchProfileData = createAsyncThunk<Profile, void, ThunkConfig<string>>(
+export const fetchProfileData = createAsyncThunk<Profile, string, ThunkConfig<string>>(
     'profile/fetchProfileData',
-    async(_, thunkAPI) => {
+    async(profileId, thunkAPI) => {
         try {
-            const response = await thunkAPI.extra.api.get<Profile>('/profile')
+            const response = await thunkAPI.extra.api.get<Profile>(`/profile/${profileId}`);
             return response.data;
         }
         catch (e) {

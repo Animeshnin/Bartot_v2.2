@@ -5,6 +5,7 @@ import {AxiosInstance} from "axios";
 import {NavigateOptions, To} from "react-router-dom";
 import {ArticleSchema} from "@/entities/Article";
 import {ArticleDetailsPageSchema} from "@/pages/ArticleDetailsPage";
+import {AddCommentFormSchema} from "@/features/addCommentForm/model/types/addCommentsFormSchema.ts";
 
 export interface StateSchema {
     user: UserSchema,
@@ -12,6 +13,7 @@ export interface StateSchema {
     profile?: ProfileSchema,
     article: ArticleSchema,
     articleComments: ArticleDetailsPageSchema,
+    addCommentsForm: AddCommentFormSchema
 }
 
 
