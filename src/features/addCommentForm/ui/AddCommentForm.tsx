@@ -24,8 +24,10 @@ export const AddCommentForm = ({className}: AddCommentFormProps) => {
 
     const onSendComment = useCallback(() => {
         console.log(text);
-        dispatch(sendComment)
-    }, [dispatch]);
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        dispatch(sendComment(text))
+    }, [dispatch, text]);
     return (
         <div className={classNames(cls.AddCommentForm, {}, [className])}>
             <Input value={text} onChange={onChangeTextComment} placeholder={'Добавить комментарий>'}/>

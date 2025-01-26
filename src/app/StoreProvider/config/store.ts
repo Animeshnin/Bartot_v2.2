@@ -14,6 +14,8 @@ export function createReduxStore(
     initialState?: StateSchema,
     navigate?: (to: To, options?: NavigateOptions) => void )  {
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     const rootReducer: ReducersMapObject<StateSchema> = combineReducers({
         user:   userReducer,
         loginForm: loginReducer,

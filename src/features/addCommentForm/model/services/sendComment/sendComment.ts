@@ -2,20 +2,26 @@ import {createAsyncThunk} from "@reduxjs/toolkit";
 
 import {ThunkConfig} from "@/app/StoreProvider";
 import {Comment} from "@/entities/Comment";
+
+
+
 import {getUserAuthData} from "@/entities/User";
-import {getAddCommentFormText} from "../../selectors/getAddCommentForm.ts";
 import {getArticleDetailsData} from "@/entities/Article";
 
 
 
-export const sendComment = createAsyncThunk<Comment, void, ThunkConfig<string>>(
+
+
+
+export const sendComment = createAsyncThunk<Comment, string, ThunkConfig<string>>(
     'articleComment/sendComment',
-    async(authData, thunkAPI, getState) => {
+    async(text, thunkAPI) => {
+
+        const {getState} = thunkAPI;
 
         console.log('123')
 
         const userData = getUserAuthData(getState())
-        const text = getAddCommentFormText(getState())
         const article = getArticleDetailsData(getState())
 
         if(!userData || !text || !article) {
@@ -39,5 +45,7 @@ export const sendComment = createAsyncThunk<Comment, void, ThunkConfig<string>>(
             return thunkAPI.rejectWithValue('error')
         }
 
-    }
+    },
 )
+
+

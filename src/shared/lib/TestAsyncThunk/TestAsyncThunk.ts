@@ -8,9 +8,12 @@ type ActionCreatorType<Return, Arg, RejectedValue>
 
 jest.mock('axios');
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 const mockedAxios = jest.mocked(axios, true);
 
 export class TestAsyncThunk<Return, Arg, RejectedValue> {
+
     dispatch: jest.MockedFn<any>;
 
     getState: () => StateSchema;
