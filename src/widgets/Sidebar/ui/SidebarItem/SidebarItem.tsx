@@ -1,10 +1,10 @@
 import {classNames} from "@/shared/lib/classNames/classNames.ts";
 import AppLink, {AppLinkTheme} from "@/shared/ui/AppLink/AppLink.tsx";
 import cls from "@/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss";
-import {SidebarItemType} from "@/widgets/Sidebar/model/items.ts";
 import {memo} from "react";
 import {useSelector} from "react-redux";
 import {getUserAuthData} from "@/entities/User/selectors/getUserAuthData/getUserAuthData.ts";
+import {SidebarItemType} from "@/widgets/Sidebar/model/types/sidebar.ts";
 interface SidebarItemProps {
     item: SidebarItemType
 }
