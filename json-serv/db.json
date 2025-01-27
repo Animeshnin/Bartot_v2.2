@@ -90,6 +90,12 @@
       "username": "admin",
       "password": "123",
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "123",
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
     }
   ],
   "comments": [
@@ -100,58 +106,16 @@
       "userId": "1"
     },
     {
-      "id": "2",
-      "text": "some comment 2",
       "articleId": "1",
-      "userId": "2"
-    },
-    {
-      "id": "3",
-      "text": "some comment 3",
-      "articleId": "1",
-      "userId": "1"
+      "userId": "2",
+      "text": "asd",
+      "id": "YtcKxxa"
     },
     {
       "articleId": "1",
-      "userId": "1",
-      "text": "123",
-      "id": "ApnNIE-"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "123",
-      "id": "YcHtyjv"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "123",
-      "id": "CKVsc8W"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "asdasd",
-      "id": "5lXWpFL"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "asdasd",
-      "id": "eWTW-OA"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "Решил проблему, но как?",
-      "id": "IgYDr1E"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "aaa",
-      "id": "d8guetW"
+      "userId": "2",
+      "text": "asd",
+      "id": "ahQbpd6"
     }
   ],
   "profile": [
@@ -168,7 +132,7 @@
     },
     {
       "id": "2",
-      "first": "Ильнур",
+      "first": "Ильжопа",
       "lastname": "Сабзероу",
       "age": 19,
       "currency": "USD",

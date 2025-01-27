@@ -6,11 +6,12 @@ import {useDispatch, useSelector} from "react-redux";
 import {useCallback} from "react";
 import {addCommentsFormActions} from "../model/slices/addCommentsFormSlice.ts";
 import {getAddCommentFormText} from "../model/selectors/getAddCommentForm.ts";
-import {sendComment} from "@/features/addCommentForm/model/services/sendComment/sendComment.ts";
-
+import {addCommentForArticle} from '@/pages/ArticleDetailsPage/model/services/addCommentForArticle.ts'
 
 interface AddCommentFormProps {
     className?: string;
+    addCommentForArticle: (text: string) => void;
+
 }
 
 export const AddCommentForm = ({className}: AddCommentFormProps) => {
@@ -26,8 +27,9 @@ export const AddCommentForm = ({className}: AddCommentFormProps) => {
         console.log(text);
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
-        dispatch(sendComment(text))
-    }, [dispatch, text]);
+        dispatch(addCommentForArticle(text))
+        onChangeTextComment('')
+    }, [dispatch, onChangeTextComment, text]);
     return (
         <div className={classNames(cls.AddCommentForm, {}, [className])}>
             <Input value={text} onChange={onChangeTextComment} placeholder={'Добавить комментарий>'}/>

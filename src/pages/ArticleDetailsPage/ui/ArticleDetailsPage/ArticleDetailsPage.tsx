@@ -10,6 +10,7 @@ import {getArticleDetailsCommentsIsLoading} from "../../model/selectors/comments
 import {useEffect} from "react";
 import {fetchCommentsByArticleId} from "@/pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId.ts";
 import {AddCommentForm} from "@/features/addCommentForm";
+import {addCommentForArticle} from "@/pages/ArticleDetailsPage/model/services/addCommentForArticle.ts";
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -20,11 +21,15 @@ export const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
     const comments = useSelector(getArticleComments.selectAll)
     const commentsIsLoading = useSelector(getArticleDetailsCommentsIsLoading)
     const dispatch = useDispatch();
+
+
+
     
     useEffect(() => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
         dispatch(fetchCommentsByArticleId(id))
+
     }, [dispatch, id]);
     
     if(!id){
@@ -38,7 +43,7 @@ export const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
         <>
             <ArticleDetails id={id}/>
             <Text title={"Комментарий"}/>
-            <AddCommentForm/>
+            <AddCommentForm addCommentForArticle={addCommentForArticle}/>
             <CommentList isLoading={commentsIsLoading} comments={comments}/>
         </>
 

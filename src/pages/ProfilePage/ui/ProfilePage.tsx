@@ -2,7 +2,7 @@ import {classNames} from "@/shared/lib/classNames/classNames.ts";
 import {useCallback, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {
-    fetchProfileData,
+    fetchProfileData, getProfileData,
     getProfileError,
     getProfileForm,
     getProfileIsLoading,
@@ -18,6 +18,7 @@ import {Country} from "@/entities/Country/types/country.ts";
 import {Text} from "@/shared/ui/Text/Text.tsx";
 import {TextTheme} from "@/shared/ui/Text/TextTypes.ts";
 import {useParams} from "react-router";
+import {getUserAuthData} from "@/entities/User";
 
 interface ProfilePageProps {
     className?: string;
@@ -26,6 +27,9 @@ interface ProfilePageProps {
 const  ProfilePage =({className}: ProfilePageProps) => {
     const dispatch = useDispatch();
     const formData = useSelector(getProfileForm)
+    const authData = useSelector(getUserAuthData)
+    const profileData = useSelector(getProfileData)
+    const canEdit = authData?.id === profileData?.id
     const isLoading = useSelector(getProfileIsLoading)
     const error = useSelector(getProfileError)
     const readonly = useSelector(getProfileReadonly)
@@ -89,7 +93,8 @@ const  ProfilePage =({className}: ProfilePageProps) => {
 
     return (
         <div className={classNames("", {}, [className!])}>
-            <ProfilePageHeader/>
+            {canEdit && (    <ProfilePageHeader/>)}
+
             {validateErrors?.length && validateErrors.map(err => (
                 <Text text={validateErrorTranslate[err]} theme={TextTheme.ERROR} key={err}/>
             ))}
