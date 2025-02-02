@@ -28,6 +28,10 @@ export interface ArticleBlockCode extends ArticleBlockDefault {
 
 export type ArticleBlock = ArticleBlockCode | ArticleBlockImage | ArticleBlockText;
 
+export enum  ArticleView {
+    BIG = "big",
+    SMALL = "small",
+}
 
 export enum ArticleType {
     IT = 'IT',
